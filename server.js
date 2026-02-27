@@ -13,6 +13,7 @@ const externalPaperRoutes = require("./routes/externalPaperRoutes");
 const allotmentRoutes = require("./routes/allotmentRoutes");
 const teacherEvaluationRoutes = require("./routes/teacherEvaluationRoutes");
 const resultRoutes = require("./routes/resultRoutes");
+const evaluationRequestRoutes = require("./routes/evaluationRequestRoutes");
 
 dotenv.config();
 connectDB();
@@ -33,6 +34,7 @@ app.use("/uploads", express.static("uploads"));
 app.use("/api/allotment", allotmentRoutes);
 app.use("/api/teacher", teacherEvaluationRoutes);
 app.use("/api/results", resultRoutes);
+app.use("/api/evaluation-requests", evaluationRequestRoutes);
 
 
 
